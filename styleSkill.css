@@ -1,0 +1,254 @@
+@import "style.css";
+
+#skill {
+
+    display: flex;
+    width: 100%;
+    height: 44rem;
+    margin-top: 4rem;
+ margin-bottom: 12rem;
+}
+#skill-h2 {
+    
+    padding: 1rem 0;
+    letter-spacing: 0.5rem;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+    margin-left: 0.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    color: var(--color-neutraltext);
+
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+}
+.skill-div1 {
+    width: 30%;
+height: 100%;
+}
+
+.timeline {
+    border: 2px solid var(--color-neutral5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 100%;
+
+
+    z-index: -1;
+    background-color: var(--color-neutral5);
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 3rem;
+    margin-top: 1rem;
+
+}
+
+.icons>svg {
+    color: var(--color-neutral4);
+    background-color: var(--color-neutral1);
+    height: 2.5rem;
+}
+
+.skill-div2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skillbox {
+    background-color: var(--color-neutral4);
+    border-radius: 3rem;
+    padding: 3rem;
+    margin: 0.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    word-spacing: 0.4rem;
+}
+
+.skillbox>h2 {
+    color: var(--color-neutral1);
+}
+
+.skillbox>small {
+    color: var(--color-neutral1);
+}
+
+@media (min-width:0px) and (max-width:396px) {
+    #skill {
+        flex-direction: column;
+    }
+
+    .skillbox {
+        margin-left: 4rem;
+        padding: 1rem;
+    }
+
+    .skill-div2 {
+        position: absolute;
+    }
+    .skill-div1{
+        min-height: 34rem;
+        max-width: 3rem;
+    }
+
+    .timeline {
+        justify-content: left;
+    }
+
+    .timeline::before {
+        content: "";
+        height: 0;
+        width: 0;
+    }
+
+    .timeline::after {
+        content: "";
+        height: 0;
+        width: 0;
+    }
+}
+
+/* css below  for new layout*/
+
+#skill {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+ 
+  margin: auto;
+}
+
+/* ICON FLOW */
+.skill-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  flex: 0 0 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  color: var(--color-neutral5);
+}
+
+/* TOOLTIP */
+.icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 130%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-neutral5);
+
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+
+   font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--color-neutral1);
+}
+
+.icon:hover::after {
+  opacity: 1;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--color-neutral1);
+}
+
+/* SUMMARY */
+.skill-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 1rem;
+  flex: 1;
+}
+
+.skillbox {
+  background: var(--color-neutraltext);
+  padding: 1rem;
+  border-radius: 12px;
+
+}
+
+.skillbox h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: var(--color-neutral5);
+
+   font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.skillbox p {
+  font-size: 0.85rem;
+  color: var(--color-neutral1);
+
+   font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 1rem;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #skill {
+    flex-direction: column;
+  }
+
+  .skill-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .icon::after {
+    left: 50%;
+    top: -120%;
+    transform: translateX(-50%);
+  }
+
+  .skill-summary {
+    grid-template-columns: 1fr;
+  }
+}

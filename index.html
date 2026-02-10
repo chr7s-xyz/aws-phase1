@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Secure Office Environment</title>
+    <link rel="icon" href="./images/cat.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleNavLink.css">
+    <link rel="stylesheet" href="styleFooter.css">
+    <link rel="stylesheet" href="styleProfile.css">
+    <link rel="stylesheet" href="styleSkill.css">
+    <link rel="stylesheet" href="styleExperience.css">
+    <link rel="stylesheet" href="styleEducation.css">
+    <link rel="stylesheet" href="styleProject.css">
+    <link rel="stylesheet" href="styleCertification.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Reddit+Mono:wght@200..900&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8c9e72e8f8.js" crossorigin="anonymous"></script>
+    <script>
+        function redirectToSTOPnSHOP() {
+            window.open("https://github.com/chr7s-xyz");
+        }
+
+        function redirectToWebMapping() {
+            window.open("https://chr7s-xyz.github.io/WebMapping/");
+        }
+
+        function redirectToCatGenerator() {
+            window.open("https://catimage-generator-chris.netlify.app/");
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR SECTION  -->
+    <nav>
+        <div id="color-theme-div">
+            <button type="button" class="color-theme-button" id="theme-button-dark" onclick="dark()"></button>
+            <button type="button" class="color-theme-button" id="theme-button-light" onclick="light()"></button>
+        </div>
+
+        <div class="toggle-button-div">
+            <button type="button" id="button-toggle" class="button-toggle  button">
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+            <button type="button" id="button-toggle2" class="button-toggle2   button">
+
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+
+
+
+    </nav>
+    <section id="links" class="links">
+        <ul class="redirect-link " id="redirect">
+
+            <li class="link-li"><a href="">
+                    <i class="fa-solid fa-2xl fa-house "></i>
+                </a></li>
+            <li class="link-li"><a href="#experience">
+                    <i class="fa-solid   fa-2xl fa-cloud"></i>
+                </a></li>
+            <li class="link-li"><a href="#education">
+                    <i class="fa-solid  fa-2xl fa-bell-concierge"></i>
+                </a></li>
+            <li class="link-li"><a href="#skill-h2">
+                    <i class="fa-solid   fa-2xl  fa-star"></i>
+                </a></li>
+            <li class="link-li"><a href="#footer">
+                    <i class="fa-solid  fa-2xl  fa-shoe-prints"></i>
+                </a></li>
+          
+
+        </ul>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile">
+        <div class="profile-div hidden">
+            <img src=".\images\profile.jpg" alt="profile">
+
+        </div>
+        <div class="profile-text">
+            <p class="quicksand-unique">Secure Office Environment</p>
+
+
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+        <h1>Project Overview</h1>
+        <div class="experience-grid">
+
+            <div class="imgdiv hidden">
+                <img src=".\images\awsProjectPhase1.png">
+            </div>
+            <div class="experience-text hidden quicksand-unique">
+                <span>AWS Phase 1</span>
+
+                <p>Developed an AWS Secure Office Environment project to apply core AWS concepts through a real-world
+                    architecture rather than isolated examples.</p>
+                <p>The project focuses on networking, security, and scalability, using VPC design, private subnets, and
+                    controlled internet access.
+                </p>
+                <p>Scalability was implemented using an Application Load Balancer and Auto Scaling Group, with web
+                    applications served securely from private EC2 instances. </p>
+                <p>PERIOD : FEB '26</p>
+                <p><a href='https://github.com/chr7s-xyz/aws-phase1'><i class="fa-solid fa-2xl fa-location"></i></a></p>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+        <h1>Services Used</h1>
+        <div class="education-grid">
+
+            <div class="imgdiv hidden">
+                <img src=".\images\school.jpg">
+            </div>
+            <div class="education-text hidden quicksand-unique">
+                <span>AWS Services</span>
+                <p><strong>Amazon VPC</strong> – Implemented as the core networking layer, including custom VPCs with
+                    public and private subnets, route tables, Internet Gateway, NAT Gateway, security groups,
+                    and VPC peering connections to enable secure communication between isolated VPCs.</p>
+                <p><br></p>
+                <p><strong>Amazon EC2</strong> – Used to host application and utility workloads within private subnets,
+                    ensuring no direct internet exposure.</p>
+                <p><br></p>
+                <p><strong>Application Load Balancer (ALB)</strong> – Configured to handle inbound HTTP/HTTPS traffic,
+                    perform health checks, and distribute requests across EC2 instances in multiple Availability Zones.
+                </p>
+                <p><br></p>
+                <p><strong>Auto Scaling Group (ASG)</strong> – Implemented to automatically manage EC2 instance scaling
+                    and replacement for high availability and resilience.</p>
+                <p><br></p>
+
+                <p><strong>AWS Lambda</strong> – Used to run serverless automation tasks without provisioning servers,
+                    triggered by scheduled and event-based workflows.</p>
+                <p><br></p>
+                <p><strong>Amazon EventBridge</strong> – Implemented to trigger AWS Lambda functions based on scheduled
+                    rules and events, enabling automated operations.</p>
+                <p><br></p>
+                <p><strong>Amazon S3</strong> – Used to store static content, project assets, logs, and artifacts
+                    required by the environment.</p>
+                <p><br></p>
+                <p><strong>Amazon CloudFront</strong> – Implemented as a content delivery network in front of S3 to
+                    securely distribute static content with low latency and improved performance.</p>
+                <p><br></p>
+                <p><strong>AWS IAM</strong> – Used for identity and access management, including IAM users, roles,
+                    policies, and instance profiles, enforcing least-privilege access across services.</p>
+                <p><br></p>
+                <p><strong>AWS Systems Manager (SSM)</strong> – Implemented to provide secure, agent-based
+                    administrative access to EC2 instances using Session Manager, eliminating SSH and public IP usage.
+                </p>
+                <p><br></p>
+                <p><strong>Amazon CloudWatch</strong> – Used for monitoring metrics, logs, alarms, and operational
+                    visibility across EC2, ALB, Lambda, and Auto Scaling components.</p>
+                <p><br></p>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+   <h2 id="skill-h2">SKILLS ~ Secure AWS Architecture</h2>
+
+<section id="skill">
+
+  <!-- ICON FLOW -->
+  <div class="skill-icons">
+
+    <div class="icon" data-tooltip="Amazon CloudFront – CDN for secure, low-latency content delivery">
+      <i class="fa-solid fa-globe"></i>
+    </div>
+
+    <div class="icon" data-tooltip="Application Load Balancer – Distributes traffic across EC2 instances">
+      <i class="fa-solid fa-network-wired"></i>
+    </div>
+
+    <div class="icon" data-tooltip="Auto Scaling Group – Ensures scalability and high availability">
+      <i class="fa-solid fa-layer-group"></i>
+    </div>
+
+    <div class="icon" data-tooltip="Amazon EC2 – Compute layer hosting workloads in private subnets">
+      <i class="fa-solid fa-server"></i>
+    </div>
+
+    <div class="icon" data-tooltip="Amazon VPC – Networking with subnets, route tables, NAT & peering">
+      <i class="fa-solid fa-diagram-project"></i>
+    </div>
+
+    <div class="icon" data-tooltip="EventBridge – Event-driven scheduling and automation">
+      <i class="fa-solid fa-clock"></i>
+    </div>
+
+    <div class="icon" data-tooltip="AWS Lambda – Serverless automation functions">
+      <i class="fa-solid fa-bolt"></i>
+    </div>
+
+    <div class="icon" data-tooltip="Amazon S3 – Storage for static content and artifacts">
+      <i class="fa-solid fa-database"></i>
+    </div>
+
+    <div class="icon" data-tooltip="AWS Systems Manager – Secure access without SSH">
+      <i class="fa-solid fa-terminal"></i>
+    </div>
+
+  </div>
+
+  <!-- SERVICE SUMMARY -->
+  <div class="skill-summary">
+
+    <div class="skillbox">
+      <h3>Networking</h3>
+      <p>VPC, Public & Private Subnets, Route Tables, IGW, NAT Gateway, VPC Peering</p>
+    </div>
+
+    <div class="skillbox">
+      <h3>Compute & Scaling</h3>
+      <p>EC2, Application Load Balancer, Auto Scaling Group</p>
+    </div>
+
+    <div class="skillbox">
+      <h3>Automation</h3>
+      <p>EventBridge, AWS Lambda</p>
+    </div>
+
+    <div class="skillbox">
+      <h3>Storage & Delivery</h3>
+      <p>S3, CloudFront</p>
+    </div>
+
+    <div class="skillbox">
+      <h3>Access & Operations</h3>
+      <p>Systems Manager (SSM), IAM Roles</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer" class="hidden">
+        <div id="footer-div1" class="footer-div">
+            <ul>
+                <li><a href='https://www.instagram.com/chr7s.dsouza/'>
+                        <i class="fa-brands  fa-2xl fa-square-instagram"></i>
+                    </a></li>
+                <li><a href='https://github.com/chr7s-xyz'>
+                        <i class="fa-brands  fa-2xl fa-github"></i>
+                    </a></li>
+                <li><a href='https://www.linkedin.com/in/chrisdsouza30'>
+                        <i class="fa-brands  fa-2xl fa-linkedin"></i>
+                    </a></li>
+            </ul>
+        </div>
+        <div id="footer-div2" class="footer-div">
+            <P>Made using HTML, CSS, JS</P>
+            <P><i class="fa-solid fa-envelope"></i> chrisdsouza30@gmail.com</P>
+        </div>
+        <div id="footer-div3" class="footer-div">
+            Copyrights reserved '23
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

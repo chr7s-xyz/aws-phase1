@@ -31,7 +31,7 @@
 height: 100%;
 }
 
-.timeline {
+/* .timeline {
     border: 2px solid var(--color-neutral5);
     width: 100%;
     height: 100%;
@@ -48,9 +48,9 @@ height: 100%;
 
     z-index: -1;
     background-color: var(--color-neutral5);
-}
+} */
 
-.icons {
+/* .icons {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -63,7 +63,7 @@ height: 100%;
     color: var(--color-neutral4);
     background-color: var(--color-neutral1);
     height: 2.5rem;
-}
+} */
 
 .skill-div2 {
     width: 100%;
@@ -150,6 +150,11 @@ height: 100%;
   flex: 0 0 80px;
   justify-content: center;
   align-items: center;
+
+  max-width: 100%;
+  overflow: visible;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .icon {
@@ -161,29 +166,37 @@ height: 100%;
 
 /* TOOLTIP */
 .icon::after {
-  content: attr(data-tooltip);
+content: attr(data-tooltip);
   position: absolute;
-  left: 130%;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--color-neutral5);
-
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  white-space: nowrap;
-  border-radius: 6px;
+  left: 50%;
+  top: -120%;
+  transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease;
+  z-index: 999;
 
-   font-family: "Reddit Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 1rem;
-    font-style: normal;
-    font-size: 1rem;
-    color: var(--color-neutral1);
+  background: var(--color-neutraltext);
+  color: var(--color-neutral1);
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  max-width: min(240px, calc(100vw - 2rem));
+  white-space: normal;
+  text-align: center;
 }
-
+/* .skill-icons .icon::after {
+left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.75rem;
+} */
+/* .skill-icons .icon:nth-last-child(-n+3)::after {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+  margin-right: 0.75rem;
+  transform: translateY(-50%);
+} */
 .icon:hover::after {
   opacity: 1;
     font-family: "Reddit Mono", monospace;
@@ -207,6 +220,10 @@ height: 100%;
   background: var(--color-neutraltext);
   padding: 1rem;
   border-radius: 12px;
+
+  /* width: 100%; */
+  max-width: 100%;
+  box-sizing: border-box;
 
 }
 
@@ -240,17 +257,68 @@ height: 100%;
   }
 
   .skill-icons {
+    gap: 1.5rem;
     flex-direction: row;
     justify-content: center;
   }
 
-  .icon::after {
-    left: 50%;
-    top: -120%;
-    transform: translateX(-50%);
-  }
+/* .icon::after {
+    top: 120%;
+  } */
 
   .skill-summary {
     grid-template-columns: 1fr;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .icon:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-6px);
+  }
+   .skill-div1 .icon::after {
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.75rem;
+  }
+    .skill-div1 .icon:nth-last-child(-n+2)::after {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: 0.75rem;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .icon::after {
+    top: 120%;
+    left: 2rem;
+    transform: translateX(-50%);
+  }
+
+  .icon:active::after,
+  .icon:focus-visible::after {
+    opacity: 1;
+  }
+}
+
+/* @media (max-width: 650px) {
+  .skill-icons {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .icon::after {
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 2rem);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .icon:active::after,
+  .icon:focus::after {
+    opacity: 1;
+  }
+
+} */

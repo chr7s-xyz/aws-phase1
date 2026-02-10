@@ -6,6 +6,12 @@
 html{
  scroll-behavior: smooth;
  background-color: var(--color-neutral1);
+ width: 100%;
+   overflow-x: hidden;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 :root{
     --color-neutral1 :#212529 ;

@@ -4,7 +4,7 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    padding: 13rem 0;
+    padding: 8rem 0;
     background-image: linear-gradient(to bottom, var(--color-neutral1) 25%, var(--color-neutraltext));
     text-align: center;
 }
